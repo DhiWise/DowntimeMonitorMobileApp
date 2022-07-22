@@ -1,4 +1,4 @@
-# flutter-downtime-monitor-with-slack
+# Flutter downtime monitor with slack notifications
 In daily organization routine, they may have different types of work and dependencies on other services, each service may have a different status when the situations like service downtime occur every organisation may not be able to be aware of the exact situation at a time due to which there may be some problems into their product functionality and other things.  
 
 For all different types of services have different status pages, so instead of visiting and checking each service status, it can be solved by providing all service statuses on a single page. and send notification of the dependency services which are having downtime can be automated.
