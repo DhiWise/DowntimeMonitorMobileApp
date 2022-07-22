@@ -27,9 +27,6 @@ The Project has default configuration in constant of status API services endpoin
 14. Figma
 15. Discord
 
-
-# statusmobile
-
 <div>
   <h1 align="center">Getting Started with Flutter 🚀 </h1>
   <strong>
