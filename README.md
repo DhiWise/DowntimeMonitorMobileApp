@@ -27,7 +27,7 @@ GitLab
 Figma
 Discord
 
-Run the application.
+# Run the application.
 
 This app has slack incoming webhooks Signup/Signins.
 
