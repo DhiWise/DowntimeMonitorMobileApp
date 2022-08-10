@@ -46,7 +46,7 @@ The Project has default configuration in constant of status API services endpoin
 #### 1. Clone the repository
 ```sh
 $ git clone https://github.com/.....
-$ cd flutter-canny-mobile
+$ cd flutter-downtime-monitor-with-slack
 ```
 ## Install Dependencies
 
