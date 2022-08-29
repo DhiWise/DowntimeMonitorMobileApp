@@ -1,25 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:statusmobile/core/app_export.dart';
+import 'package:status_check_mobile/core/app_export.dart';
 
 class AppDecoration {
-  static BoxDecoration get textstylepoppinsbold14 => BoxDecoration(
-        color: ColorConstant.black900,
-        borderRadius: BorderRadius.circular(
-          getHorizontalSize(
-            5.00,
-          ),
-        ),
-      );
-  static BoxDecoration get groupstylegray50 => BoxDecoration(
+  static BoxDecoration get fillGray50 => BoxDecoration(
         color: ColorConstant.gray50,
       );
-  static BoxDecoration get groupstylewhiteA700cornerradius => BoxDecoration(
+  static BoxDecoration get outlineBlack90014 => BoxDecoration(
         color: ColorConstant.whiteA700,
-        borderRadius: BorderRadius.circular(
-          getHorizontalSize(
-            8.00,
-          ),
-        ),
         boxShadow: [
           BoxShadow(
             color: ColorConstant.black90014,
@@ -36,7 +23,21 @@ class AppDecoration {
           ),
         ],
       );
-  static BoxDecoration get groupstylewhiteA700 => BoxDecoration(
+  static BoxDecoration get fillWhiteA700 => BoxDecoration(
         color: ColorConstant.whiteA700,
       );
+}
+
+class BorderRadiusStyle {
+  static BorderRadius roundedBorder8 = BorderRadius.circular(
+    getHorizontalSize(
+      8.00,
+    ),
+  );
+
+  static BorderRadius roundedBorder5 = BorderRadius.circular(
+    getHorizontalSize(
+      5.00,
+    ),
+  );
 }

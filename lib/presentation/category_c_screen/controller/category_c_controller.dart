@@ -1,12 +1,11 @@
-import 'package:statusmobile/core/constants/image.dart';
-import 'package:statusmobile/presentation/category_c_screen/models/category_c_item_model.dart';
+import 'package:status_check_mobile/presentation/category_c_screen/models/category_c_item_model.dart';
+import '../../../core/constants/image.dart';
 
 import '../../../core/constants/redirectUrl.dart';
 import '/core/app_export.dart';
-import 'package:statusmobile/presentation/category_c_screen/models/category_c_model.dart';
-import 'package:flutter/material.dart';
+import 'package:status_check_mobile/presentation/category_c_screen/models/category_c_model.dart';
 
-class CategoryCController extends GetxController with StateMixin<dynamic> {
+class CategoryCController extends GetxController {
   Rx<CategoryCModel> categoryCModelObj = CategoryCModel().obs;
 
   @override

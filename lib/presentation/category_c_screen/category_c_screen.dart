@@ -3,8 +3,8 @@ import '../category_e_screen/models/category_e_model.dart';
 import 'controller/category_c_controller.dart';
 import 'models/category_c_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:statusmobile/core/app_export.dart';
+import 'package:status_check_mobile/core/app_export.dart';
+import 'package:status_check_mobile/widgets/custom_icon_button.dart';
 
 class CategoryCScreen extends GetWidget<CategoryCController> {
   @override
@@ -16,99 +16,59 @@ class CategoryCScreen extends GetWidget<CategoryCController> {
           width: size.width,
           child: SingleChildScrollView(
             child: Container(
-              decoration: BoxDecoration(
-                color: ColorConstant.gray50,
-              ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Container(
-                      width: size.width,
-                      margin: EdgeInsets.only(
-                        top: getVerticalSize(
-                          48.00,
-                        ),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.only(
-                          left: getHorizontalSize(
-                            17.00,
+                  Container(
+                    width: size.width,
+                    margin: getMargin(
+                      left: 17,
+                      top: 48,
+                      right: 17,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        CustomIconButton(
+                          height: 36,
+                          width: 36,
+                          child: CommonImageView(
+                            svgPath: ImageConstant.imgMenu,
                           ),
-                          right: getHorizontalSize(
-                            17.00,
+                        ),
+                        Padding(
+                          padding: getPadding(
+                            top: 9,
+                            bottom: 8,
+                          ),
+                          child: Text(
+                            "lbl_categories".tr,
+                            overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.left,
+                            style: AppStyle.txtPoppinsSemiBold16.copyWith(
+                              letterSpacing: 1.00,
+                            ),
                           ),
                         ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Container(
-                              height: getSize(
-                                36.00,
-                              ),
-                              width: getSize(
-                                36.00,
-                              ),
-                              child: SvgPicture.asset(
-                                ImageConstant.imgDrawericon2,
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                top: getVerticalSize(
-                                  4.00,
-                                ),
-                                bottom: getVerticalSize(
-                                  8.00,
-                                ),
-                              ),
-                              child: Text(
-                                "Services",
-                                overflow: TextOverflow.ellipsis,
-                                textAlign: TextAlign.center,
-                                style: AppStyle.textstylepoppinssemibold16
-                                    .copyWith(
-                                  fontSize: getFontSize(
-                                    16,
-                                  ),
-                                  letterSpacing: 1.00,
-                                ),
-                              ),
-                            ),
-                            Container(
-                              height: getSize(
-                                36.00,
-                              ),
-                              width: getSize(
-                                36.00,
-                              ),
-                              child: SvgPicture.asset(
-                                ImageConstant.imgCarticon2,
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ],
+                        CustomIconButton(
+                          height: 36,
+                          width: 36,
+                          child: CommonImageView(
+                            svgPath: ImageConstant.imgBag,
+                          ),
                         ),
-                      ),
+                      ],
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(
-                      left: getHorizontalSize(
-                        20.00,
-                      ),
-                      top: getVerticalSize(
-                        25.00,
-                      ),
-                      right: getHorizontalSize(
-                        20.00,
-                      ),
+                    padding: getPadding(
+                      left: 17,
+                      top: 25,
+                      right: 17,
                     ),
                     child: Obx(
                       () => GridView.builder(
@@ -162,17 +122,16 @@ class CategoryCScreen extends GetWidget<CategoryCController> {
                             width: getHorizontalSize(
                               93.00,
                             ),
-                            decoration: AppDecoration.textstylepoppinsbold14,
                             child: Text(
                               "Go To Status Page",
                               textAlign: TextAlign.center,
-                              style: AppStyle.textstylepoppinsbold14.copyWith(
+                              style: AppStyle.txtPoppinsSemiBold16.copyWith(
                                 fontSize: getFontSize(
                                   14,
                                 ),
                               ),
                             ),
-                          ))),
+                          )))
                 ],
               ),
             ),

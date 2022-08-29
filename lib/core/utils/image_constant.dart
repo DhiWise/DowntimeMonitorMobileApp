@@ -1,35 +1,32 @@
 class ImageConstant {
-  static String imgCategoryname2 = 'assets/images/img_categoryname_2.svg';
+  static String imgBag = 'assets/images/img_bag.svg';
 
-  static String imgBackgroundimag13 = 'assets/images/img_backgroundimag_13.png';
+  static String imgVector = 'assets/images/img_vector.svg';
 
-  static String imgCategoryname3 = 'assets/images/img_categoryname_3.svg';
+  static String imgMenu = 'assets/images/img_menu.svg';
 
-  static String imgBackgroundimag12 = 'assets/images/img_backgroundimag_12.png';
+  static String imgVideocamera = 'assets/images/img_videocamera.svg';
 
-  static String imgDrawericon3 = 'assets/images/img_drawericon_3.svg';
+  static String imgBackgroundimag3 = 'assets/images/img_backgroundimag_3.png';
 
-  static String imgDrawericon2 = 'assets/images/img_drawericon_2.svg';
+  static String imgMegaphone = 'assets/images/img_megaphone.svg';
 
-  static String imgCategoryname = 'assets/images/img_categoryname.svg';
+  static String imgSettings = 'assets/images/img_settings.svg';
 
-  static String imgBackgroundimag14 = 'assets/images/img_backgroundimag_14.png';
+  static String imgBackgroundimag208X159 =
+      'assets/images/img_backgroundimag_208X159.png';
 
-  static String imgCarticon2 = 'assets/images/img_carticon_2.svg';
+  static String imgBackgroundimag1 = 'assets/images/img_backgroundimag_1.png';
 
-  static String imgCategoryname1 = 'assets/images/img_categoryname_1.svg';
+  static String imgBackgroundimag = 'assets/images/img_backgroundimag.png';
 
-  static String imgBackgroundimag16 = 'assets/images/img_backgroundimag_16.png';
+  static String imgBackgroundimag2 = 'assets/images/img_backgroundimag_2.png';
 
-  static String imgCategoryname4 = 'assets/images/img_categoryname_4.svg';
+  static String imgBackgroundimag4 = 'assets/images/img_backgroundimag_4.png';
 
-  static String imgCategoryname5 = 'assets/images/img_categoryname_5.svg';
+  static String imgLocation = 'assets/images/img_location.svg';
 
-  static String imgCarticon3 = 'assets/images/img_carticon_3.svg';
-
-  static String imgBackgroundimag17 = 'assets/images/img_backgroundimag_17.png';
-
-  static String imgBackgroundimag15 = 'assets/images/img_backgroundimag_15.png';
+  static String imgHome = 'assets/images/img_home.svg';
 
   static String imageNotFound = 'assets/images/image_not_found.png';
 }

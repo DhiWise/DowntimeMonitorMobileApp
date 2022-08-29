@@ -1,5 +1,5 @@
 import '/core/app_export.dart';
-import 'package:statusmobile/presentation/app_navigation_screen/models/app_navigation_model.dart';
+import 'package:status_check_mobile/presentation/app_navigation_screen/models/app_navigation_model.dart';
 
 class AppNavigationController extends GetxController {
   Rx<AppNavigationModel> appNavigationModelObj = AppNavigationModel().obs;

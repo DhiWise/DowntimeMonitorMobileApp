@@ -1,5 +1,5 @@
-import 'package:statusmobile/core/app_export.dart';
-import 'package:statusmobile/data/apiClient/api_client.dart';
+import 'package:status_check_mobile/core/app_export.dart';
+import 'package:status_check_mobile/data/apiClient/api_client.dart';
 
 class InitialBindings extends Bindings {
   @override

@@ -4,7 +4,7 @@ import '../controller/category_e_controller.dart';
 import '../models/category_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:statusmobile/core/app_export.dart';
+import 'package:status_check_mobile/core/app_export.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // ignore: must_be_immutable
@@ -81,7 +81,7 @@ class CategoryItemWidget extends StatelessWidget {
                         categoryItemModelObj.Name.toString(),
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
-                        style: AppStyle.textstylepoppinssemibold201.copyWith(
+                        style: AppStyle.txtPoppinsSemiBold20.copyWith(
                           fontSize: getFontSize(
                             20,
                           ),
@@ -100,7 +100,7 @@ class CategoryItemWidget extends StatelessWidget {
                               categoryItemModelObj.Message.value,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
-                              style: AppStyle.textstylepoppinsmedium14.copyWith(
+                              style: AppStyle.txtPoppinsSemiBold16.copyWith(
                                   fontSize: getFontSize(
                                     16,
                                   ),

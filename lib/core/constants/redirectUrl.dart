@@ -4,6 +4,7 @@ class RedirectUrl {
   static String slack = "https://status.slack.com/";
 
   static String amazon = "https://health.aws.amazon.com/health/status";
+
   static String clickup = "https://status.clickup.com/";
 
   static String keka = "https://status.keka.com/";

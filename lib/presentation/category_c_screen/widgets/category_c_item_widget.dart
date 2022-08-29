@@ -1,7 +1,8 @@
 import '../controller/category_c_controller.dart';
 import '../models/category_c_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:statusmobile/core/app_export.dart';
+import 'package:status_check_mobile/core/app_export.dart';
+import 'package:status_check_mobile/widgets/custom_button.dart';
 
 // ignore: must_be_immutable
 class CategoryCItemWidget extends StatelessWidget {
@@ -75,7 +76,7 @@ class CategoryCItemWidget extends StatelessWidget {
                           categoryCItemModelObj.Name.value,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.center,
-                          style: AppStyle.textstylepoppinssemibold20.copyWith(
+                          style: AppStyle.txtPoppinsSemiBold20.copyWith(
                               fontSize: getFontSize(
                                 20,
                               ),
@@ -107,11 +108,10 @@ class CategoryCItemWidget extends StatelessWidget {
                               width: getHorizontalSize(
                                 93.00,
                               ),
-                              decoration: AppDecoration.textstylepoppinsbold14,
                               child: Text(
                                 "Add To WatchList",
                                 textAlign: TextAlign.center,
-                                style: AppStyle.textstylepoppinsbold14.copyWith(
+                                style: AppStyle.txtPoppinsSemiBold16.copyWith(
                                   fontSize: getFontSize(
                                     14,
                                   ),

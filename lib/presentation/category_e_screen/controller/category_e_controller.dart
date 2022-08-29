@@ -1,13 +1,12 @@
-import 'package:statusmobile/presentation/category_c_screen/controller/category_c_controller.dart';
-import 'package:statusmobile/presentation/category_c_screen/models/category_c_item_model.dart';
-
+import 'package:status_check_mobile/presentation/category_c_screen/controller/category_c_controller.dart';
+import 'package:status_check_mobile/presentation/category_c_screen/models/category_c_item_model.dart';
 import '../../../core/constants/url.dart';
 import '/core/app_export.dart';
-import 'package:statusmobile/presentation/category_e_screen/models/category_e_model.dart';
-import 'package:statusmobile/presentation/category_c_screen/models/category_c_model.dart';
+import 'package:status_check_mobile/presentation/category_e_screen/models/category_e_model.dart';
+import 'package:status_check_mobile/presentation/category_c_screen/models/category_c_model.dart';
 import 'package:flutter/material.dart';
-import 'package:statusmobile/data/models/statusJson/get_status_json_resp.dart';
-import 'package:statusmobile/data/apiClient/api_client.dart';
+import 'package:status_check_mobile/data/models/statusJson/get_status_json_resp.dart';
+import 'package:status_check_mobile/data/apiClient/api_client.dart';
 
 class CategoryEController extends GetxController {
   Rx<CategoryEModel> categoryEModelObj = CategoryEModel().obs;

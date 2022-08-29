@@ -1,7 +1,9 @@
-import 'package:statusmobile/core/app_export.dart';
-import 'package:statusmobile/core/utils/progress_dialog_utils.dart';
+import 'package:status_check_mobile/core/app_export.dart';
+import 'package:status_check_mobile/core/utils/progress_dialog_utils.dart';
 
 class ApiClient extends GetConnect {
+  var url = "https://status.postman.com";
+
   @override
   void onInit() {
     super.onInit();
