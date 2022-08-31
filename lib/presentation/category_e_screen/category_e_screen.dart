@@ -36,7 +36,7 @@ class CategoryEScreen extends GetWidget<CategoryEController> {
                                         svgPath: ImageConstant.imgMenu)),
                                 Padding(
                                     padding: getPadding(top: 9, bottom: 8),
-                                    child: Text("lbl_categories".tr,
+                                    child: Text("Services Status",
                                         overflow: TextOverflow.ellipsis,
                                         textAlign: TextAlign.left,
                                         style: AppStyle.txtPoppinsSemiBold16

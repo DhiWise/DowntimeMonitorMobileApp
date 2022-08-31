@@ -46,7 +46,7 @@ class CategoryCScreen extends GetWidget<CategoryCController> {
                             bottom: 8,
                           ),
                           child: Text(
-                            "lbl_categories".tr,
+                            "Services",
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtPoppinsSemiBold16.copyWith(
@@ -142,21 +142,26 @@ class CategoryCScreen extends GetWidget<CategoryCController> {
   }
 
   onTapCategoryE() {
-    controller.categoryCModelObj.value.categoryCItemList.value = controller
-        .categoryCModelObj.value.categoryCItemList.value
-        .where((element) => element.IsSeleted == true)
-        .toList();
-    Rx<CategoryEModel> categoryEModelObj = CategoryEModel().obs;
-    categoryEModelObj.value.categoryItemList.value =
-        controller.categoryCModelObj.value.categoryCItemList.value;
-    Get.toNamed(
-      AppRoutes.categoryEScreen,
-      arguments: {
-        'list': categoryEModelObj.value.categoryItemList.value,
-      },
-      // parameters: {
-      // 'list': controller.categoryCModelObj.value.categoryCItemList.value,
-      // },
-    );
+    if (controller.categoryCModelObj.value.categoryCItemList.value
+            .where((element) => element.IsSeleted == true)
+            .length >
+        0) {
+      controller.categoryCModelObj.value.categoryCItemList.value = controller
+          .categoryCModelObj.value.categoryCItemList.value
+          .where((element) => element.IsSeleted == true)
+          .toList();
+      Rx<CategoryEModel> categoryEModelObj = CategoryEModel().obs;
+      categoryEModelObj.value.categoryItemList.value =
+          controller.categoryCModelObj.value.categoryCItemList.value;
+      Get.toNamed(
+        AppRoutes.categoryEScreen,
+        arguments: {
+          'list': categoryEModelObj.value.categoryItemList.value,
+        },
+        // parameters: {
+        // 'list': controller.categoryCModelObj.value.categoryCItemList.value,
+        // },
+      );
+    }
   }
 }
