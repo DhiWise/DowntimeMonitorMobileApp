@@ -1,16 +1,16 @@
-import '../controller/category_c_controller.dart';
-import '../models/category_c_item_model.dart';
+import '../controller/service_list_controller.dart';
+import '../models/service_list_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:status_check_mobile/core/app_export.dart';
 import 'package:status_check_mobile/widgets/custom_button.dart';
 
 // ignore: must_be_immutable
-class CategoryCItemWidget extends StatelessWidget {
-  CategoryCItemWidget(this.categoryCItemModelObj);
+class ServiceListItemWidget extends StatelessWidget {
+  ServiceListItemWidget(this.categoryCItemModelObj);
 
-  CategoryCItemModel categoryCItemModelObj;
+  ServiceListItemModel categoryCItemModelObj;
 
-  var controller = Get.find<CategoryCController>();
+  var controller = Get.find<ServiceListController>();
 
   @override
   Widget build(BuildContext context) {

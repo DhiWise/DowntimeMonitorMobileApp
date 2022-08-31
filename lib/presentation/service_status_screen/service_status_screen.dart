@@ -1,12 +1,12 @@
-import '../category_c_screen/models/category_c_item_model.dart';
-import '../category_e_screen/widgets/category_item_widget.dart';
-import 'controller/category_e_controller.dart';
-import 'models/category_item_model.dart';
+import '../service_list_screen/models/service_list_item_model.dart';
+import '../service_status_screen/widgets/service_status_item_widget.dart';
+import 'controller/service_status_controller.dart';
+import 'models/service_status_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:status_check_mobile/core/app_export.dart';
 import 'package:status_check_mobile/widgets/custom_icon_button.dart';
 
-class CategoryEScreen extends GetWidget<CategoryEController> {
+class ServiceStatusScreen extends GetWidget<ServiceStatusController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -56,11 +56,11 @@ class CategoryEScreen extends GetWidget<CategoryEController> {
                               itemCount: controller.categoryEModelObj.value
                                   .categoryItemList.length,
                               itemBuilder: (context, index) {
-                                CategoryCItemModel model = controller
+                                ServiceListItemModel model = controller
                                     .categoryEModelObj
                                     .value
                                     .categoryItemList[index];
-                                return CategoryItemWidget(model);
+                                return ServiceStatusItemWidget(model);
                               })))
                     ]))))));
   }

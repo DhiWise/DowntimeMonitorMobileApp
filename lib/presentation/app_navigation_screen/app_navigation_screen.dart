@@ -161,10 +161,10 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
   }
 
   onTapCategoryE() {
-    Get.toNamed(AppRoutes.categoryEScreen);
+    Get.toNamed(AppRoutes.serviceStatusScreen);
   }
 
   onTapCategoryC() {
-    Get.toNamed(AppRoutes.categoryCScreen);
+    Get.toNamed(AppRoutes.serviceListScreen);
   }
 }

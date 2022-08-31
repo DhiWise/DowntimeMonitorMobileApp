@@ -1,22 +1,22 @@
-import 'package:status_check_mobile/presentation/category_c_screen/controller/category_c_controller.dart';
-import 'package:status_check_mobile/presentation/category_c_screen/models/category_c_item_model.dart';
+import 'package:status_check_mobile/presentation/service_list_screen/controller/service_list_controller.dart';
+import 'package:status_check_mobile/presentation/service_list_screen/models/service_list_item_model.dart';
 import '../../../core/constants/url.dart';
 import '/core/app_export.dart';
-import 'package:status_check_mobile/presentation/category_e_screen/models/category_e_model.dart';
-import 'package:status_check_mobile/presentation/category_c_screen/models/category_c_model.dart';
+import 'package:status_check_mobile/presentation/service_status_screen/models/service_status_model.dart';
+import 'package:status_check_mobile/presentation/service_list_screen/models/service_list_model.dart';
 import 'package:flutter/material.dart';
 import 'package:status_check_mobile/data/models/statusJson/get_status_json_resp.dart';
 import 'package:status_check_mobile/data/apiClient/api_client.dart';
 
-class CategoryEController extends GetxController {
-  Rx<CategoryEModel> categoryEModelObj = CategoryEModel().obs;
-  Rx<CategoryCModel> categoryCModelObj = CategoryCModel().obs;
+class ServiceStatusController extends GetxController {
+  Rx<ServiceStatusModel> categoryEModelObj = ServiceStatusModel().obs;
+  Rx<ServiceListModel> categoryCModelObj = ServiceListModel().obs;
 
   GetStatusJsonResp getStatusJsonResp = GetStatusJsonResp();
   String postBAasAItLazrUlP2GZvhmDlSVResp = "";
   @override
   void onReady() {
-    List<CategoryCItemModel> list = Get.arguments['list'];
+    List<ServiceListItemModel> list = Get.arguments['list'];
     categoryEModelObj.value.categoryItemList.value = list;
     categoryEModelObj.value.categoryItemList.value.forEach((element) {
       this.callFetchStatusJson(
@@ -34,7 +34,7 @@ class CategoryEController extends GetxController {
     super.onClose();
   }
 
-  void callFetchStatusJson(CategoryCItemModel element,
+  void callFetchStatusJson(ServiceListItemModel element,
       {VoidCallback? successCall, VoidCallback? errCall}) async {
     Url url = new Url();
 
@@ -52,7 +52,7 @@ class CategoryEController extends GetxController {
     });
   }
 
-  void onFetchStatusJsonSuccess(CategoryCItemModel element, var response) {
+  void onFetchStatusJsonSuccess(ServiceListItemModel element, var response) {
     element.Status.value = false;
     element.Message.value = "No Response";
     if (element.Name.value == "Clickup") {

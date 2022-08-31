@@ -1,19 +1,19 @@
 import '../../../core/constants/redirectUrl.dart';
-import '../../category_c_screen/models/category_c_item_model.dart';
-import '../controller/category_e_controller.dart';
-import '../models/category_item_model.dart';
+import '../../service_list_screen/models/service_list_item_model.dart';
+import '../controller/service_status_controller.dart';
+import '../models/service_status_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:status_check_mobile/core/app_export.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // ignore: must_be_immutable
-class CategoryItemWidget extends StatelessWidget {
-  CategoryItemWidget(this.categoryItemModelObj);
+class ServiceStatusItemWidget extends StatelessWidget {
+  ServiceStatusItemWidget(this.categoryItemModelObj);
 
-  CategoryCItemModel categoryItemModelObj;
+  ServiceListItemModel categoryItemModelObj;
 
-  var controller = Get.find<CategoryEController>();
+  var controller = Get.find<ServiceStatusController>();
 
   @override
   Widget build(BuildContext context) {

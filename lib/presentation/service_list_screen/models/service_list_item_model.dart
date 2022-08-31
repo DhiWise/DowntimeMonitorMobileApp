@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-class CategoryCItemModel {
-   Rx<String> Name = Rx('');
+class ServiceListItemModel {
+  Rx<String> Name = Rx('');
   Rx<String> Image = Rx('');
   Rx<String> Url = Rx('');
   Rx<String> Message = Rx('');

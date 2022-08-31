@@ -1,15 +1,15 @@
-import 'package:status_check_mobile/presentation/category_e_screen/category_e_screen.dart';
-import 'package:status_check_mobile/presentation/category_e_screen/binding/category_e_binding.dart';
-import 'package:status_check_mobile/presentation/category_c_screen/category_c_screen.dart';
-import 'package:status_check_mobile/presentation/category_c_screen/binding/category_c_binding.dart';
+import 'package:status_check_mobile/presentation/service_status_screen/service_status_screen.dart';
+import 'package:status_check_mobile/presentation/service_status_screen/binding/service_status_binding.dart';
+import 'package:status_check_mobile/presentation/service_list_screen/service_list.dart';
+import 'package:status_check_mobile/presentation/service_list_screen/binding/service_list_binding.dart';
 import 'package:status_check_mobile/presentation/app_navigation_screen/app_navigation_screen.dart';
 import 'package:status_check_mobile/presentation/app_navigation_screen/binding/app_navigation_binding.dart';
 import 'package:get/get.dart';
 
 class AppRoutes {
-  static String categoryEScreen = '/category_e_screen';
+  static String serviceStatusScreen = '/service_status_screen';
 
-  static String categoryCScreen = '/category_c_screen';
+  static String serviceListScreen = '/service_list_screen';
 
   static String appNavigationScreen = '/app_navigation_screen';
 
@@ -17,17 +17,17 @@ class AppRoutes {
 
   static List<GetPage> pages = [
     GetPage(
-      name: categoryEScreen,
-      page: () => CategoryEScreen(),
+      name: serviceStatusScreen,
+      page: () => ServiceStatusScreen(),
       bindings: [
-        CategoryEBinding(),
+        ServiceStatusBinding(),
       ],
     ),
     GetPage(
-      name: categoryCScreen,
-      page: () => CategoryCScreen(),
+      name: serviceListScreen,
+      page: () => ServiceListScreen(),
       bindings: [
-        CategoryCBinding(),
+        ServiceListBinding(),
       ],
     ),
     GetPage(
@@ -39,9 +39,9 @@ class AppRoutes {
     ),
     GetPage(
       name: initialRoute,
-      page: () => CategoryCScreen(),
+      page: () => ServiceListScreen(),
       bindings: [
-        CategoryCBinding(),
+        ServiceListBinding(),
       ],
     )
   ];

@@ -1,12 +1,12 @@
-import '../category_c_screen/widgets/category_c_item_widget.dart';
-import '../category_e_screen/models/category_e_model.dart';
-import 'controller/category_c_controller.dart';
-import 'models/category_c_item_model.dart';
+import '../service_list_screen/widgets/service_list_item_widget.dart';
+import '../service_status_screen/models/service_status_model.dart';
+import 'controller/service_list_controller.dart';
+import 'models/service_list_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:status_check_mobile/core/app_export.dart';
 import 'package:status_check_mobile/widgets/custom_icon_button.dart';
 
-class CategoryCScreen extends GetWidget<CategoryCController> {
+class ServiceListScreen extends GetWidget<ServiceListController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -89,9 +89,9 @@ class CategoryCScreen extends GetWidget<CategoryCController> {
                         itemCount: controller
                             .categoryCModelObj.value.categoryCItemList.length,
                         itemBuilder: (context, index) {
-                          CategoryCItemModel model = controller
+                          ServiceListItemModel model = controller
                               .categoryCModelObj.value.categoryCItemList[index];
-                          return CategoryCItemWidget(
+                          return ServiceListItemWidget(
                             model,
                           );
                         },
@@ -150,11 +150,11 @@ class CategoryCScreen extends GetWidget<CategoryCController> {
           .categoryCModelObj.value.categoryCItemList.value
           .where((element) => element.IsSeleted == true)
           .toList();
-      Rx<CategoryEModel> categoryEModelObj = CategoryEModel().obs;
+      Rx<ServiceStatusModel> categoryEModelObj = ServiceStatusModel().obs;
       categoryEModelObj.value.categoryItemList.value =
           controller.categoryCModelObj.value.categoryCItemList.value;
       Get.toNamed(
-        AppRoutes.categoryEScreen,
+        AppRoutes.serviceStatusScreen,
         arguments: {
           'list': categoryEModelObj.value.categoryItemList.value,
         },
