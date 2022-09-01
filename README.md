@@ -37,9 +37,9 @@ The Project has default configuration in constant of status API services endpoin
 
 # Screenshots
 
-![Image1](https://raw.githubusercontent.com/AshutoshDaveDhiWise/flutter-downtime-monitor-with-slack/main/Screenshot%20from%202022-07-22%2020-11-50.png)
-![Image2](https://raw.githubusercontent.com/AshutoshDaveDhiWise/flutter-downtime-monitor-with-slack/main/Screenshot%20from%202022-07-22%2020-13-13.png)
-![Slack Notification](https://raw.githubusercontent.com/AshutoshDaveDhiWise/flutter-downtime-monitor-with-slack/main/Screenshot%20from%202022-07-19%2019-03-17.png)
+![Image1](/Screenshot%20from%202022-07-22%2020-11-50.png)
+![Image2](/Screenshot%20from%202022-07-22%2020-13-13.png)
+![Slack Notification](/Screenshot%20from%202022-07-19%2019-03-17.png)
 
 # Setup
 
@@ -57,7 +57,7 @@ $ cd flutter-downtime-monitor-with-slack
 
 #### 2. Set Account URL In Following Files
 
-Slack - lib/data/apiClient/api_client.dart
+Create Slack Webhooks API account from https://api.slack.com/apps?new_app=1 and add URL which is generated from Slack at "lib/data/apiClient/api_client.dart" => "https://hooks.slack.com/services/[your slack webhook setups url]"
 
 <div>
   <h1 align="center">Getting Started with Flutter 🚀 </h1>
