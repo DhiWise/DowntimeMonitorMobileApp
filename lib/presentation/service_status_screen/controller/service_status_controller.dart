@@ -59,31 +59,31 @@ class ServiceStatusController extends GetxController {
       if (response
           .toString()
           .contains("100% Online - All systems operational")) {
-        getStatusJsonResp?.status?.description = "All Systems Operational";
+        getStatusJsonResp.status?.description = "All Systems Operational";
       }
     } else if (element.Name.value == "Slack") {
       if (response['status'].toString() == "ok") {
-        getStatusJsonResp?.status?.description = "All Systems Operational";
+        getStatusJsonResp.status?.description = "All Systems Operational";
       }
     } else if (element.Name.value == "Amazon") {
       if (response.toString() == "[]") {
-        getStatusJsonResp?.status?.description = "All Systems Operational";
+        getStatusJsonResp.status?.description = "All Systems Operational";
       }
     } else if (element.Name.value == "Keka") {
       if (response.toString().contains("All services are online")) {
-        getStatusJsonResp?.status?.description = "All Systems Operational";
+        getStatusJsonResp.status?.description = "All Systems Operational";
       }
     } else if (element.Name.value == "Canny") {
       if (response.toString().contains("All services are online")) {
-        getStatusJsonResp?.status?.description = "All Systems Operational";
+        getStatusJsonResp.status?.description = "All Systems Operational";
       }
     } else if (element.Name.value == "Hoppscotch") {
       if (response.toString().contains("All services are online")) {
-        getStatusJsonResp?.status?.description = "All Systems Operational";
+        getStatusJsonResp.status?.description = "All Systems Operational";
       }
     } else if (element.Name.value == "Gitlab") {
       if (response.toString().contains("All services are online")) {
-        getStatusJsonResp?.status?.description = "All Systems Operational";
+        getStatusJsonResp.status?.description = "All Systems Operational";
       }
     } else {
       getStatusJsonResp = GetStatusJsonResp.fromJson(response);

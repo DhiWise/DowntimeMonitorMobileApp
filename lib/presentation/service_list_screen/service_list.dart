@@ -33,13 +33,6 @@ class ServiceListScreen extends GetWidget<ServiceListController> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        CustomIconButton(
-                          height: 36,
-                          width: 36,
-                          child: CommonImageView(
-                            svgPath: ImageConstant.imgMenu,
-                          ),
-                        ),
                         Padding(
                           padding: getPadding(
                             top: 9,
@@ -48,22 +41,53 @@ class ServiceListScreen extends GetWidget<ServiceListController> {
                           child: Text(
                             "Services",
                             overflow: TextOverflow.ellipsis,
-                            textAlign: TextAlign.left,
+                            textAlign: TextAlign.center,
                             style: AppStyle.txtPoppinsSemiBold16.copyWith(
                               letterSpacing: 1.00,
                             ),
                           ),
                         ),
-                        CustomIconButton(
-                          height: 36,
-                          width: 36,
-                          child: CommonImageView(
-                            svgPath: ImageConstant.imgBag,
-                          ),
-                        ),
                       ],
                     ),
                   ),
+                  GestureDetector(
+                      onTap: () {
+                        onTapCategoryE();
+                      },
+                      child: Padding(
+                          padding: EdgeInsets.only(
+                            left: getHorizontalSize(
+                              20.00,
+                            ),
+                            top: getVerticalSize(
+                              25.00,
+                            ),
+                            right: getHorizontalSize(
+                              20.00,
+                            ),
+                          ),
+                          child: Container(
+                            alignment: Alignment.center,
+                            height: getVerticalSize(
+                              49.46,
+                            ),
+                            width: getHorizontalSize(
+                              93.00,
+                            ),
+                            decoration: new BoxDecoration(
+                              borderRadius: new BorderRadius.circular(16.0),
+                              color: Colors.yellow,
+                            ),
+                            child: Text(
+                              "Go To Status Page",
+                              textAlign: TextAlign.center,
+                              style: AppStyle.txtPoppinsSemiBold16.copyWith(
+                                fontSize: getFontSize(
+                                  14,
+                                ),
+                              ),
+                            ),
+                          ))),
                   Padding(
                     padding: getPadding(
                       left: 17,
@@ -98,40 +122,6 @@ class ServiceListScreen extends GetWidget<ServiceListController> {
                       ),
                     ),
                   ),
-                  GestureDetector(
-                      onTap: () {
-                        onTapCategoryE();
-                      },
-                      child: Padding(
-                          padding: EdgeInsets.only(
-                            left: getHorizontalSize(
-                              20.00,
-                            ),
-                            top: getVerticalSize(
-                              25.00,
-                            ),
-                            right: getHorizontalSize(
-                              20.00,
-                            ),
-                          ),
-                          child: Container(
-                            alignment: Alignment.center,
-                            height: getVerticalSize(
-                              49.46,
-                            ),
-                            width: getHorizontalSize(
-                              93.00,
-                            ),
-                            child: Text(
-                              "Go To Status Page",
-                              textAlign: TextAlign.center,
-                              style: AppStyle.txtPoppinsSemiBold16.copyWith(
-                                fontSize: getFontSize(
-                                  14,
-                                ),
-                              ),
-                            ),
-                          )))
                 ],
               ),
             ),
@@ -146,13 +136,11 @@ class ServiceListScreen extends GetWidget<ServiceListController> {
             .where((element) => element.IsSeleted == true)
             .length >
         0) {
-      controller.categoryCModelObj.value.categoryCItemList.value = controller
+      Rx<ServiceStatusModel> categoryEModelObj = ServiceStatusModel().obs;
+      categoryEModelObj.value.categoryItemList.value = controller
           .categoryCModelObj.value.categoryCItemList.value
           .where((element) => element.IsSeleted == true)
           .toList();
-      Rx<ServiceStatusModel> categoryEModelObj = ServiceStatusModel().obs;
-      categoryEModelObj.value.categoryItemList.value =
-          controller.categoryCModelObj.value.categoryCItemList.value;
       Get.toNamed(
         AppRoutes.serviceStatusScreen,
         arguments: {

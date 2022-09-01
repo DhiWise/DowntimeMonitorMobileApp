@@ -29,11 +29,6 @@ class ServiceStatusScreen extends GetWidget<ServiceStatusController> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisSize: MainAxisSize.max,
                               children: [
-                                CustomIconButton(
-                                    height: 36,
-                                    width: 36,
-                                    child: CommonImageView(
-                                        svgPath: ImageConstant.imgMenu)),
                                 Padding(
                                     padding: getPadding(top: 9, bottom: 8),
                                     child: Text("Services Status",
@@ -41,11 +36,6 @@ class ServiceStatusScreen extends GetWidget<ServiceStatusController> {
                                         textAlign: TextAlign.left,
                                         style: AppStyle.txtPoppinsSemiBold16
                                             .copyWith(letterSpacing: 1.00))),
-                                CustomIconButton(
-                                    height: 36,
-                                    width: 36,
-                                    child: CommonImageView(
-                                        svgPath: ImageConstant.imgBag))
                               ])),
                       Padding(
                           padding: getPadding(

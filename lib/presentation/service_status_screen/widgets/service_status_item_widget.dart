@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import '../../../core/constants/redirectUrl.dart';
 import '../../service_list_screen/models/service_list_item_model.dart';
 import '../controller/service_status_controller.dart';
@@ -136,7 +138,21 @@ class ServiceStatusItemWidget extends StatelessWidget {
                   width: getSize(
                     50.00,
                   ),
-                  child: Image.network(categoryItemModelObj.Image.value),
+                  child: categoryItemModelObj.Image.value
+                          .toString()
+                          .startsWith("https://")
+                      ? Image.network(
+                          categoryItemModelObj.Image.value,
+                          height: getVerticalSize(
+                            159.00,
+                          ),
+                          width: getHorizontalSize(
+                            159.00,
+                          ),
+                          fit: BoxFit.fill,
+                        )
+                      : Image.memory(Base64Decoder().convert(
+                          categoryItemModelObj.Image.value.toString())),
                 ),
               ),
             ],

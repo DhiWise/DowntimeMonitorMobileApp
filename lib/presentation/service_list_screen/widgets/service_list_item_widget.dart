@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import '../controller/service_list_controller.dart';
 import '../models/service_list_item_model.dart';
 import 'package:flutter/material.dart';
@@ -36,18 +38,22 @@ class ServiceListItemWidget extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             children: [
               Align(
-                alignment: Alignment.centerLeft,
-                child: Image.network(
-                  categoryCItemModelObj.Image.value,
-                  height: getVerticalSize(
-                    159.00,
-                  ),
-                  width: getHorizontalSize(
-                    159.00,
-                  ),
-                  fit: BoxFit.fill,
-                ),
-              ),
+                  alignment: Alignment.centerLeft,
+                  child: categoryCItemModelObj.Image.value
+                          .toString()
+                          .startsWith("https://")
+                      ? Image.network(
+                          categoryCItemModelObj.Image.value,
+                          height: getVerticalSize(
+                            159.00,
+                          ),
+                          width: getHorizontalSize(
+                            159.00,
+                          ),
+                          fit: BoxFit.fill,
+                        )
+                      : Image.memory(Base64Decoder().convert(
+                          categoryCItemModelObj.Image.value.toString()))),
               Align(
                 alignment: Alignment.bottomCenter,
                 child: Padding(
@@ -107,6 +113,10 @@ class ServiceListItemWidget extends StatelessWidget {
                               ),
                               width: getHorizontalSize(
                                 93.00,
+                              ),
+                              decoration: new BoxDecoration(
+                                borderRadius: new BorderRadius.circular(16.0),
+                                color: Colors.green,
                               ),
                               child: Text(
                                 "Add To WatchList",

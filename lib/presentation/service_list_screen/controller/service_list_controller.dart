@@ -6,7 +6,7 @@ import '/core/app_export.dart';
 import 'package:status_check_mobile/presentation/service_list_screen/models/service_list_model.dart';
 
 class ServiceListController extends GetxController {
-  Rx<ServiceListModel> categoryCModelObj = ServiceListModel().obs;
+  Rx<ServiceListModel> categoryCModelObj = new ServiceListModel().obs;
 
   @override
   void onReady() {
