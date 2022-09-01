@@ -37,8 +37,8 @@ The Project has default configuration in constant of status API services endpoin
 
 # Screenshots
 
-![Image1](/Screenshot%20from%202022-07-22%2020-11-50.png)
-![Image2](/Screenshot%20from%202022-07-22%2020-13-13.png)
+![Image1](/Screenshot%20from%202022-09-01%2017-17-20.png)
+![Image2](/Screenshot%20from%202022-09-01%2017-17-46.png)
 ![Slack Notification](/Screenshot%20from%202022-07-19%2019-03-17.png)
 
 # Setup
