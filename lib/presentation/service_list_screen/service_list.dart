@@ -18,19 +18,19 @@ class ServiceListScreen extends GetWidget<ServiceListController> {
             child: Container(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Container(
                     width: size.width,
                     margin: getMargin(
                       left: 17,
-                      top: 48,
+                      top: 20,
                       right: 17,
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
@@ -47,51 +47,40 @@ class ServiceListScreen extends GetWidget<ServiceListController> {
                             ),
                           ),
                         ),
+                        GestureDetector(
+                            onTap: () {
+                              onTapCategoryE();
+                            },
+                            child: Container(
+                              alignment: Alignment.center,
+                              height: getVerticalSize(
+                                39.46,
+                              ),
+                              width: getHorizontalSize(
+                                140.00,
+                              ),
+                              decoration: new BoxDecoration(
+                                borderRadius: new BorderRadius.circular(5.0),
+                                color: Colors.blue,
+                              ),
+                              child: Text(
+                                "Go To Status Page",
+                                textAlign: TextAlign.center,
+                                style: AppStyle.txtPoppinsSemiBold16.copyWith(
+                                  color: Colors.white,
+                                  fontSize: getFontSize(
+                                    12,
+                                  ),
+                                ),
+                              ),
+                            )),
                       ],
                     ),
                   ),
-                  GestureDetector(
-                      onTap: () {
-                        onTapCategoryE();
-                      },
-                      child: Padding(
-                          padding: EdgeInsets.only(
-                            left: getHorizontalSize(
-                              20.00,
-                            ),
-                            top: getVerticalSize(
-                              25.00,
-                            ),
-                            right: getHorizontalSize(
-                              20.00,
-                            ),
-                          ),
-                          child: Container(
-                            alignment: Alignment.center,
-                            height: getVerticalSize(
-                              49.46,
-                            ),
-                            width: getHorizontalSize(
-                              93.00,
-                            ),
-                            decoration: new BoxDecoration(
-                              borderRadius: new BorderRadius.circular(16.0),
-                              color: Colors.yellow,
-                            ),
-                            child: Text(
-                              "Go To Status Page",
-                              textAlign: TextAlign.center,
-                              style: AppStyle.txtPoppinsSemiBold16.copyWith(
-                                fontSize: getFontSize(
-                                  14,
-                                ),
-                              ),
-                            ),
-                          ))),
                   Padding(
                     padding: getPadding(
                       left: 17,
-                      top: 25,
+                      top: 40,
                       right: 17,
                     ),
                     child: Obx(
@@ -99,7 +88,7 @@ class ServiceListScreen extends GetWidget<ServiceListController> {
                         shrinkWrap: true,
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           mainAxisExtent: getVerticalSize(
-                            209.00,
+                            220.00,
                           ),
                           crossAxisCount: 2,
                           mainAxisSpacing: getHorizontalSize(

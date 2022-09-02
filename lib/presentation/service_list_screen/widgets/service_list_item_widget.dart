@@ -17,114 +17,108 @@ class ServiceListItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(() => Container(
+          padding: EdgeInsets.all(10),
           decoration: (categoryCItemModelObj.IsSeleted.value == true)
-              ? const BoxDecoration(
-                  border: Border(
-                  top: BorderSide(width: 3.0, color: Color(0xFF00FF00)),
-                  left: BorderSide(width: 3.0, color: Color(0xFF00FF00)),
-                  right: BorderSide(width: 3.0, color: Color(0xFF00FF00)),
-                  bottom: BorderSide(width: 3.0, color: Color(0xFF00FF00)),
-                ))
-              : const BoxDecoration(
-                  border: Border(),
+              ? BoxDecoration(
+                  border: Border.all(width: 3.0, color: Color(0xFFe3e3e3)),
+                )
+              : BoxDecoration(
+                  border: Border.all(width: 3.0, color: Colors.transparent),
                 ),
+          // ),
           height: getVerticalSize(
             208.00,
           ),
           width: getHorizontalSize(
             159.00,
           ),
-          child: Stack(
-            alignment: Alignment.bottomCenter,
+          child: Column(
+            // alignment: Alignment.bottomCenter,
             children: [
               Align(
-                  alignment: Alignment.centerLeft,
+                  alignment: Alignment.center,
                   child: categoryCItemModelObj.Image.value
                           .toString()
                           .startsWith("https://")
                       ? Image.network(
                           categoryCItemModelObj.Image.value,
                           height: getVerticalSize(
-                            159.00,
+                            100.00,
                           ),
                           width: getHorizontalSize(
                             159.00,
                           ),
-                          fit: BoxFit.fill,
+                          fit: BoxFit.contain,
                         )
-                      : Image.memory(Base64Decoder().convert(
-                          categoryCItemModelObj.Image.value.toString()))),
+                      : Image.memory(
+                          Base64Decoder().convert(
+                              categoryCItemModelObj.Image.value.toString()),
+                          height: 100,
+                          fit: BoxFit.contain,
+                        )),
               Align(
                 alignment: Alignment.bottomCenter,
                 child: Padding(
                   padding: EdgeInsets.only(
-                    left: getHorizontalSize(
-                      22.00,
-                    ),
+                    // left: getHorizontalSize(
+                    //   22.00,
+                    // ),
                     top: getVerticalSize(
                       25.38,
                     ),
-                    right: getHorizontalSize(
-                      22.00,
-                    ),
-                    bottom: getVerticalSize(
-                      25.38,
-                    ),
+                    // right: getHorizontalSize(
+                    //   22.00,
+                    // ),
+                    // bottom: getVerticalSize(
+                    //   25.38,
+                    // ),
                   ),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Align(
-                        alignment: Alignment.centerLeft,
+                        alignment: Alignment.center,
                         child: Text(
                           categoryCItemModelObj.Name.value,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.center,
                           style: AppStyle.txtPoppinsSemiBold20.copyWith(
                               fontSize: getFontSize(
-                                20,
+                                16,
                               ),
                               color: Colors.black),
                         ),
+                      ),
+                      SizedBox(
+                        height: 5,
                       ),
                       GestureDetector(
                           onTap: () {
                             categoryCItemModelObj.IsSeleted.value =
                                 !categoryCItemModelObj.IsSeleted.value;
                           },
-                          child: Padding(
-                            padding: EdgeInsets.only(
-                              left: getHorizontalSize(
-                                11.00,
-                              ),
-                              top: getVerticalSize(
-                                42.16,
-                              ),
-                              right: getHorizontalSize(
-                                11.00,
-                              ),
+                          child: Container(
+                            alignment: Alignment.center,
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 5, vertical: 6),
+                            // height: getVerticalSize(
+                            //   49.46,
+                            // ),
+                            // width: getHorizontalSize(
+                            //   93.00,
+                            // ),
+                            decoration: new BoxDecoration(
+                              borderRadius: new BorderRadius.circular(5.0),
+                              color: Colors.green,
                             ),
-                            child: Container(
-                              alignment: Alignment.center,
-                              height: getVerticalSize(
-                                49.46,
-                              ),
-                              width: getHorizontalSize(
-                                93.00,
-                              ),
-                              decoration: new BoxDecoration(
-                                borderRadius: new BorderRadius.circular(16.0),
-                                color: Colors.green,
-                              ),
-                              child: Text(
-                                "Add To WatchList",
-                                textAlign: TextAlign.center,
-                                style: AppStyle.txtPoppinsSemiBold16.copyWith(
-                                  fontSize: getFontSize(
-                                    14,
-                                  ),
+                            child: Text(
+                              "+ WatchList",
+                              textAlign: TextAlign.center,
+                              style: AppStyle.txtPoppinsSemiBold16.copyWith(
+                                fontSize: getFontSize(
+                                  12,
                                 ),
                               ),
                             ),
